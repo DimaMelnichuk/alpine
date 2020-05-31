@@ -1,6 +1,6 @@
 .title {
 	position: relative;
-	font-size: 40px;
+	@include adaptive-font(40, 30);
 	font-weight: bold;
 	line-height: 30px;
 	letter-spacing: 1.6px;
@@ -8,6 +8,14 @@
 	font-family: $font-third;
 	text-transform: capitalize;
 	margin-top: 60px;
+
+	@media (max-width: 570px) {
+		margin-top: 40px;
+	}
+
+	@media (max-width: 415px) {
+		margin-top: 30px;
+	}
 
 	&::after {
 		content: "";
@@ -30,5 +38,9 @@
 		text-transform: uppercase;
 		font-family: $font-family;
 		letter-spacing: 0.4px;
+
+		@media (max-width: 415px) {
+			font-size: 18px;
+		}
 	}
 }
