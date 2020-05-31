@@ -7,15 +7,6 @@
 	color: $color-secondary;
 	font-family: $font-third;
 	text-transform: capitalize;
-	margin-top: 60px;
-
-	@media (max-width: 570px) {
-		margin-top: 40px;
-	}
-
-	@media (max-width: 415px) {
-		margin-top: 30px;
-	}
 
 	&::after {
 		content: "";
@@ -25,6 +16,12 @@
 		bottom: 0;
 		margin: 0px 0px 0px 15px;
 		background: $color-secondary;
+
+		@media (max-width: 480px) {
+			width: 100%;
+			margin: 0px 0px 0px 0px;
+			bottom: 10px;
+		}
 	}
 
 	span	{
@@ -38,6 +35,12 @@
 		text-transform: uppercase;
 		font-family: $font-family;
 		letter-spacing: 0.4px;
+
+		@media (max-width: 480px) {
+			display: block;
+			position: static;
+			margin: 15px 0px 0px 0px;
+		}
 
 		@media (max-width: 415px) {
 			font-size: 18px;
