@@ -1,0 +1,33 @@
+.btn {
+	position: relative;
+	display: inline-block;
+	color: $white;
+	background: $color-secondary;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.56px;
+	border: 1px solid $color-secondary;
+	transition: border .3s, background .3s, color .3s;
+
+	&:hover {
+		background: $white;
+		color: $color-secondary;
+
+		&::after {
+			background: $color-secondary;
+		}
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		width: 10px;
+		height: 1px;
+		background: $white;
+		top: 50%;
+		transform: translate(-50%);
+		right: 20px;
+	}
+}

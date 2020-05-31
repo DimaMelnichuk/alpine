@@ -7,9 +7,11 @@ $(function(){
 /***************** Menu-btn ********************/
 let menu_burger = document.querySelector('.menu__burger');
 let menu = document.querySelector('.menu');
+let body = document.querySelector('body');
 menu_burger.addEventListener("click", function (e) {
 	menu.classList.toggle('active');
 	menu_burger.classList.toggle('active');
+	body.classList.toggle('lock');
 });
 
 
