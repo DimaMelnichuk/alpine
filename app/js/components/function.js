@@ -1,5 +1,68 @@
 $(function(){
 
+	$(".about__slider").slick({
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		asNavFor: '.about__slider-info',
+		responsive: [
+			{
+			  breakpoint: 1500,
+			  settings: {
+				slidesToShow: 5,
+			  }
+			},
+			{
+			  breakpoint: 1100,
+			  settings: {
+				slidesToShow: 4,
+			  }
+			},
+			{
+			  breakpoint: 900,
+			  settings: {
+				slidesToShow: 3,
+			  }
+			},
+			{
+			  breakpoint: 600,
+			  settings: {
+				slidesToShow: 2,
+			  }
+			},
+			{
+			  breakpoint: 450,
+			  settings: {
+				slidesToShow: 1,
+				fade: true,
+				cssEase: 'linear'
+			  }
+			}
+		 ]
+	});
+
+	$(".about__slider-info").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows:false,
+		asNavFor: '.about__slider',
+		fade: true,
+		cssEase: 'linear'
+	});
+
+	$(".testimonials__slider").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		cssEase: 'linear',
+		responsive: [
+			{
+			  breakpoint: 769,
+			  settings: {
+				arrows: false,
+			  }
+			}
+		 ]
+	});
  
 });
 

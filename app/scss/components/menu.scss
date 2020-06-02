@@ -64,59 +64,6 @@
 			color: $color-secondary;
 		}
 
-		&:hover::after {
-			content: "";
-			position: absolute;
-			top: 3px;
-			left: 0;
-			width: 100%;
-			height: 1px;
-			background: $color-secondary;
-
-			@media (max-width: 905px) {
-				display: none;
-			}
-		}
-		&:hover::before {
-			content: "";
-			position: absolute;
-			bottom: 3px;
-			left: 0;
-			width: 100%;
-			height: 1px;
-			background: $color-secondary;
-
-			@media (max-width: 905px) {
-				display: none;
-			}
-		}
-		&:hover span::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 3px;
-			width: 1px;
-			height: 100%;
-			background: $color-secondary;
-
-			@media (max-width: 905px) {
-				display: none;
-			}
-		}
-		&:hover span::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			right: 3px;
-			width: 1px;
-			height: 100%;
-			background: $color-secondary;
-
-			@media (max-width: 905px) {
-				display: none;
-			}
-		}
-
 	}
 
 	&__link-lang   {
