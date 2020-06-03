@@ -64,6 +64,29 @@
 			color: $color-secondary;
 		}
 
+		&:hover::after {
+			@media (max-width: 905px) {
+				display: none;
+			}
+		}
+
+		&:hover::before {
+			@media (max-width: 905px) {
+				display: none;
+			}
+		}
+		&:hover span::after {
+			@media (max-width: 905px) {
+				display: none;
+			}
+		}
+
+		&:hover span::before {
+			@media (max-width: 905px) {
+				display: none;
+			}
+		}
+
 	}
 
 	&__link-lang   {
