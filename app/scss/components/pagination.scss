@@ -1,0 +1,31 @@
+.pagination {
+
+	&__list {
+		display: flex;
+		justify-content: center;
+	}
+	// .pagination__item
+
+	&__item {
+	}
+
+	// .pagination__link
+
+	&__link {
+		display: inline-block;
+		line-height: 45px;
+		text-align: center;
+		width: 45px;
+		height: 45px;
+
+		border-radius: 50%;
+		color: #666666;
+		font-size: 16px;
+		font-weight: 600;
+		letter-spacing: 0.64px;
+
+		&.active {
+			border: 1px solid #019bad;
+		}
+	}
+}
