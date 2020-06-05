@@ -1,0 +1,192 @@
+.contact {
+	padding: 60px 0px;
+
+	@media (max-width: 768px) {
+		padding: 40px 0px;
+	}
+
+	@media (max-width: 480px) {
+		padding: 30px 0px;
+	}
+	// .contact__title
+
+	&__title {
+		margin: 0px 0px 60px 0px;
+	}
+
+	// .contact__row
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -40px;
+
+		@media (max-width: 768px) {
+			margin: -20px;
+		}
+	}
+
+	// .contact__column
+
+	&__column {
+		flex: 0 1 50%;
+		padding: 40px;
+
+		@media (max-width: 768px) {
+			padding: 20px;
+		}
+
+		@media (max-width: 600px) {
+			flex: 0 1 100%;
+		}
+	}
+
+	// .contact__item
+
+	&__item {
+	}
+
+	// .contact__item-title
+
+	&__item-title {
+		color: #666666;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 25px;
+		letter-spacing: 0.96px;
+		margin: 0px 0px 40px 0px;
+	}
+
+	// .contact__form
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+
+		input,
+		textarea {
+			border: 1px solid #dddddd;
+			margin: 0px 0px 20px 0px;
+			border-radius: 3px;
+			padding: 15px 20px;
+
+			&:active,
+			&:focus {
+				border-color: $color-secondary;
+			}
+
+			&:active:placeholder-shown,
+			&:focus:placeholder-shown {
+				color: $color-secondary;
+			}
+		}
+	}
+
+	// .contact__form-name
+
+	&__form-name {
+	}
+
+	// .contact__form-email
+
+	&__form-email {
+	}
+
+	// .contact__form-number
+
+	&__form-number {
+	}
+
+	// .contact__form-subject
+
+	&__form-subject {
+	}
+
+	// .contact__form-message
+
+	&__form-message {
+		height: 150px;
+		resize: none;
+	}
+
+	// .contact__form-btn
+
+	&__form-btn {
+		text-align: left;
+		align-self: flex-end;
+		padding: 15px 100px 15px 20px;
+		background: $color-secondary;	
+
+		&:hover {
+			background: $white;
+			color: $color-secondary;
+		}
+	}
+
+	// .contact__item-list
+
+	&__item-list {
+		position: relative;
+		padding: 40px;
+		color: $color-secondary;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 25px;
+		letter-spacing: 0.72px;
+
+		li:not(:last-child) {
+			margin: 0px 0px 15px 0px;
+		}
+
+		span,
+		a {
+			display: block;
+			color: #666666;
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 25px;
+			letter-spacing: 0.6px;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 15px;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: #cccccc;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 15px;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: #cccccc;
+		}
+		span::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 15px;
+			width: 1px;
+			height: 100%;
+			background-color: #cccccc;
+		}
+		span::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 15px;
+			width: 1px;
+			height: 100%;
+			background-color: #cccccc;
+		}
+	}
+}
