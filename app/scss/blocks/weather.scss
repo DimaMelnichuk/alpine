@@ -1,4 +1,5 @@
 .weather {
+	position: relative;
 	background-color: #222222;
 	padding: 60px 0px;
 
@@ -9,9 +10,29 @@
 	@media (max-width: 480px) {
 		padding: 30px 0px;
 	}
+
+	&__bg {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: rgba(29, 27, 26, .8);
+		}
+	}
 	// .weather__row
 
 	&__row {
+		position: relative;
+		z-index: 1;
 		display: flex;
 		justify-content: space-around;
 		margin: -25px -10px;
@@ -76,13 +97,19 @@
 	// .weather__item-temprature
 
 	&__item-temprature {
-		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		color: $color-secondary;
 		font-size: 50px;
 		font-weight: 700;
 		line-height: 30px;
 		letter-spacing: 2px;
-		margin: 0px 0px 35px 0px;
+		margin: 0px 0px 30px 0px;
+
+		img {
+			margin: 0px 20px 0px 0px;
+		}
 	}
 
 	// .weather__item-list

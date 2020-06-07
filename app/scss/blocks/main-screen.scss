@@ -9,16 +9,6 @@
 	@media (max-width: 570px) {
 		height: 600px;
 	}
-	// .main-screen__slider
-
-	&__slider {
-	}
-
-	// .main-screen__slider-item
-
-	&__slider-item {
-
-	}
 
 	// .main-screen__bg
 
@@ -106,6 +96,8 @@
 
 	&__btn {
 		width: 49%;
+		background: $color-secondary;
+		border: 1px solid $color-secondary;
 		text-align: left;
 		padding: 15px 10px 15px 20px;
 
@@ -119,7 +111,14 @@
 		}
 
 		&:hover {
-			border: 1px solid $white;
+			color: $color-secondary;
+			background: $white;
+			border: 1px solid $color-secondary;
+			
+			&::after {
+				background: $color-secondary;
+			}
+		
 		}
 	}
 }

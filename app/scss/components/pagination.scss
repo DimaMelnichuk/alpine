@@ -6,7 +6,8 @@
 	}
 	// .pagination__item
 
-	&__item {
+	&__item:not(:last-child) {
+		margin: 0px 5px 0px 0px;
 	}
 
 	// .pagination__link
@@ -17,12 +18,15 @@
 		text-align: center;
 		width: 45px;
 		height: 45px;
-
 		border-radius: 50%;
 		color: #666666;
 		font-size: 16px;
 		font-weight: 600;
 		letter-spacing: 0.64px;
+
+		&:hover {
+			color: $color-secondary;
+		}
 
 		&.active {
 			border: 1px solid #019bad;

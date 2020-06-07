@@ -1,4 +1,5 @@
 .footer {
+	position: relative;
 	background-color: #222222;
 	padding: 80px 0px 0px 0px;
 
@@ -13,6 +14,24 @@
 	@media (max-width: 480px) {
 		padding: 30px 0px 0px 0px;
 	}
+
+	&__bg {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: rgba(29, 27, 26, .9);
+		}
+	}
 	// .contact__title
 
 	&__title {
@@ -25,6 +44,8 @@
 	// .footer__row
 
 	&__row {
+		position: relative;
+		z-index: 1;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
@@ -74,7 +95,7 @@
 
 	// .footer__about-logo
 
-	&__about-logo {
+	&__about-logo img {
 		margin: 0px 0px 40px 0px;
 	}
 
@@ -100,7 +121,24 @@
 		display: flex;
 
 		li {
+			margin: 0px 13px 0px 0px;
+		}
 
+		a {
+			display: inline-block;
+			width: 35px;
+			height: 35px;
+			text-align: center;
+			line-height: 35px;
+			color: #cccccc;
+			border: 1px solid #cccccc;
+			border-radius: 50%;
+			transition: color .3s, border-color .3s;
+
+			&:hover {
+				color: $color-secondary;
+				border-color: $color-secondary;
+			}
 		}
 	}
 
@@ -195,6 +233,8 @@
 	// .footer__copyright
 
 	&__copyright {
+		position: relative;
+		z-index: 1;
 		height: 70px;
 		line-height: 70px;
 		text-align: center;

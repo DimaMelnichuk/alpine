@@ -26,23 +26,19 @@
 
 	&__row {
 		display: flex;
+		margin: 0px 0px 70px 0px;
 
 		@media (max-width: 768px) {
 			flex-direction: column;
-			margin: -10px 0px -10px 0px;
 		}
 	}
 
-	// .about__column
-
 	&__column {
-		flex: 0 1 32%;
-		padding: 10px 0px 10px 0px;
-		height: 100%;
+		flex: 0 1 30%;
 	}
 
 	&__column--bg {
-		flex: 1 1 68%;
+		flex: 0 1 70%;
 	}
 
 	// .about__text
@@ -67,7 +63,23 @@
 	// .about__btn
 
 	&__btn {
+		border: 1px solid $color-secondary;
+		background: $color-secondary;
 		padding: 15px 80px 15px 20px;
+
+		@media (max-width: 768px) {
+			margin: 0px 0px 30px 0px;
+		}
+
+		&:hover {
+			color: $color-secondary;
+			background: $white;
+			border: 1px solid $color-secondary;
+			
+			&::after {
+				background: $color-secondary;
+			}
+		}
 	}
 
 	// .about__img
@@ -78,7 +90,6 @@
 		height: 398px;
 		object-fit: cover;
 		object-position: center;
-		margin: 0px 0px 70px 0px;
 	}
 
 	// .about__slider

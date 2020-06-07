@@ -35,20 +35,20 @@
 
 
 .slick-arrow{
-	font-size: 0;
+	position: absolute;
 	padding: 0;
+	font-size: 0;
 	cursor: pointer;
 	border: none;
 	outline: none;
 	background: transparent;
-	position: absolute;
 	color: transparent;
-	display: block;
 	width: 45px;
 	height: 45px;
-	border: 1px solid;
+	border: 2px solid;
 	border-radius: 50%;
 	z-index: 1;
+	transition: border-color .3s;
 }
 
 .about__slider .slick-arrow {
@@ -91,28 +91,28 @@
 	border-color: $color-secondary;
 }
 
+.slick-prev:before, 
+.slick-next:before {
+	font-family: "fontello";
+	font-size: 18px;
+	color: $white;
+	transition: color .3s;
+}
 
 .about__slider .slick-prev:before, 
 .about__slider .slick-next:before {
-	content: "";
-	position: absolute;
-	border: solid #019bad;
-	border-width: 0 3px 3px 0;
-	display: inline-block;
-	padding: 5px;
-	top: 40%;
-	left: 40%;
+	color: $color-secondary;
 }
 
+.slick-prev:hover:before, 
+.slick-next:hover:before {
+	color: $color-secondary;
+}
 
 .slick-next:before {
-	transform: rotate(-45deg);
-}
-
+	content: '\e802';
+ }
+ 
 .slick-prev:before {
-	transform: rotate(135deg);
-}
-
-.testimonials__slider {
-	
+	content: '\e801';
 }

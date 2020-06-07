@@ -37,10 +37,9 @@
 	// .rooms__featured-image
 
 	&__featured-image {
-		flex: 0 0 48.33%;
+		flex: 0 0 50%;
 		position: relative;
 		min-height: 300px;
-		height: 320px;
 		margin: 0px 30px 0px 0px;
 
 		@media (max-width: 650px) {
@@ -79,12 +78,10 @@
 		font-weight: 700;
 		line-height: 18px;
 		letter-spacing: 0.56px;
-		text-decoration: line-through;
 
 		span {
 			display: block;
-			letter-spacing: 0.56px;
-			text-decoration: none;
+			text-decoration: line-through;
 		}
 	}
 
@@ -157,8 +154,13 @@
 	// .rooms__featured-btn
 
 	&__featured-btn {
+		background: #222222;
 		align-self: flex-start;
 		padding: 15px 95px 15px 20px;
+
+		&:hover {
+			background: $color-secondary;
+		}
 	}
 
 	// .rooms__row
@@ -273,12 +275,17 @@
 
 	&__item-icon {
 		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		bottom: 40px;
 		left: 40px;
 		width: 60px;
 		height: 60px;
 		border: 1px solid #ffffff;
 		border-radius: 50%;
+		font-size: 25px;
+		color: $white;
 		background-color: $color-secondary;
 
 		@media (max-width: 480px) {
