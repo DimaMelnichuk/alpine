@@ -63,6 +63,13 @@ $(function(){
 			}
 		 ]
 	});
+
+	$(".rooms-img__slider").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		cssEase: 'linear',
+	});
  
 });
 

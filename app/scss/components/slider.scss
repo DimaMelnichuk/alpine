@@ -116,3 +116,25 @@
 .slick-prev:before {
 	content: '\e801';
 }
+
+
+.rooms-img__slider .slick-arrow {
+	background: $color-secondary;
+}
+.rooms-img__slider .slick-prev:before, 
+.rooms-img__slider .slick-next:before {
+	color: $white;
+}
+
+.rooms-img__slider .slick-arrow {
+	top: 40%;
+	transform: translateY(-40%);
+}
+
+.rooms-img__slider .slick-prev {
+	left: 30px;
+ }
+ 
+ .rooms-img__slider .slick-next {
+	right: 30px;
+ }
