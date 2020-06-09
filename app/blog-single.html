@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('_head.html',{
+		"title":"Home"
+	})
+<body>
+
+	<div class="wrapper">
+	@@include('_header.html')
+		<main class="page">
+			<!-- breadcrumb -->
+			<div class="breadcrumb">
+				<div class="breadcrumb__bg ibg">
+					<img src="img/rooms/11.jpg" alt="">
+				</div>
+				<div class="breadcrumb__box">
+					<div class="breadcrumb__box-title">
+						HoME
+						<span>BLOG SINGLE</span>
+					</div>
+				</div>
+			</div>
+			<!-- breadcrumb end -->
+
+			<!-- blog-img -->
+			<div class="blog-img">
+				<div class="container">
+					<div class="blog-img__image">
+						<img src="img/rooms/11.jpg" alt="">
+					</div>
+					<div class="blog-img__name">SEA DIVING</div>
+					<div class="blog-img__date">31 Oct, 2016</div>
+				</div>
+			</div>
+			<!-- blog-img end -->
+
+			<!-- blog-detail -->
+			<div class="blog-detail">
+				<div class="container">
+					<div class="blog-detail__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel elit eget dolor semper aliquet sit amet in sem. Maecenas sit amet bibendum eros. Vivamus nec erat vel nibh lacinia bibendum. Vestibulum sed nibh fringilla, laoreet lorem vel, hendrerit ligula. Mauris malesuada risus sed orci pharetra, ut mollis nisi rutrum. Suspendisse dictum ante leo, ac cursus diam eleifend inQuisque diam felis, varius nec tincidunt sit amet, pulvinar non ipsum. Fusce elit eros, sagittis non lobortis vestibulum, blandit ac ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ornare, ligula non imperdiet posuere, nunc metus volutpat nunc, nec efficitur risus neque eu arcu. Nunc id pharetra odio. Nunc dignissim mauris nisl, vitae fringilla sapien lacinia quis. Cras ac ultrices eros, id ultricies enim. Aliquam at congue velit. Maecenas dictum elit odio, non hendrerit nulla dignissim ut. Vestibulum justo ipsum, tempus at efficitur vitae, lacinia a tortor. Aliquam non lacinia nisi. Quisque eu sollicitudin tellus.</p>
+						<p>Cras ac ultrices eros, id ultricies enim. Aliquam at congue velit. Maecenas dictum elit odio, non hendrerit nulla dignissim ut. Vestibulum justo ipsum, tempus at efficitur vitae, lacinia a tortor. Aliquam non lacinia nisi. Quisque eu sollicitudin tellus..</p>
+					</div>
+					<div class="blog-detail__quote">
+						<span></span>
+						<p>Cras ac ultrices eros, id ultricies enim. Aliquam at congue velit. Maecenas dictum elit odio, non hendrerit nulla dignissim ut. Vestibulum justo ipsum, tempus at efficitur vitae, lacinia a tortor. Aliquam non lacinia nisi. Quisque eu sollicitudin tellus..</p>
+					</div>
+					<div class="blog-detail__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel elit eget dolor semper aliquet sit amet in sem. Maecenas sit amet bibendum eros. Vivamus nec erat vel nibh lacinia bibendum. Vestibulum sed nibh fringilla, laoreet lorem vel, hendrerit ligula. Mauris malesuada risus sed orci pharetra, ut mollis nisi rutrum. Suspendisse dictum ante leo, ac cursus diam eleifend inQuisque diam felis, varius nec tincidunt sit amet, </p>
+					</div>
+					<ul class="blog-detail__social-links">
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-gplus"></i></a></li>
+						<li><a href="#"><i class="icon-pinterest"></i></a></li>
+						<li><a href="#"><i class="icon-dribbble"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- blog-detail end -->
+
+			<!-- blog-comments -->
+			<div class="blog-comments">
+				<div class="container">
+					<div class="blog-comments__title title">Comments</div>
+					<div class="blog-comments__row">
+						<div class="blog-comments__column">
+							<div class="blog-comments__item">
+								<div class="blog-comments__img">
+									<img src="img/01.jpg" alt="">
+									<a class="blog-comments__btn btn" href="#">REPLY</a>
+								</div>
+								<div class="blog-comments__body">
+									<div class="blog-comments__body-header">
+										<div class="blog-comments__name">JASMINE DOE</div>
+										<div class="blog-comments__date">31 Oct, 2016</div>
+									</div>
+									<div class="blog-comments__body-text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam scelerisque urna quis convallis. Nullam id ullamcorper nisl. 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- blog-comments end -->
+
+			<!-- blog-leave-comment -->
+			<div class="blog-leave-comment">
+				<div class="container">
+					<div class="blog-leave-comment__title title">Leave a Comment</div>
+					<div class="blog-leave-comment__row">
+						<div class="blog-leave-comment__column">
+							<form class="blog-leave-comment__form" action="#">
+								<input class="blog-leave-comment__form-name" type="text" placeholder="Name" required>
+								<input class="blog-leave-comment__form-email" type="email" placeholder="Email" required>
+								<input class="blog-leave-comment__form-subject" type="text" placeholder="Subject" required>
+							</form>
+						</div>
+						<div class="blog-leave-comment__column">
+							<form class="blog-leave-comment__form" action="#">
+								<textarea class="blog-leave-comment__form-message" name="#" id="#" placeholder="Message"></textarea>
+								<button class="blog-leave-comment__form-button btn">COMMENT</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- blog-leave-comment end -->
+
+		</main>
+		@@include('_footer.html')
+	</div>
+
+	@@include('_js.html')
+</body>
+</html>

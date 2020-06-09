@@ -1,0 +1,143 @@
+.blog-comments {
+	padding: 60px 0px;
+
+	@media (max-width: 768px) {
+		padding: 40px 0px;
+	}
+
+	@media (max-width: 480px) {
+		padding: 30px 0px;
+	}
+	// .blog-comments__title
+
+	&__title {
+		margin: 0px 0px 60px 0px;
+	}
+
+	// .blog-comments__row
+
+	&__row {
+		margin: -15px 0px;
+	}
+
+	// .blog-comments__column
+
+	&__column {
+		padding: 15px 0px;
+	}
+
+	// .blog-comments__item
+
+	&__item {
+		display: flex;
+
+		@media (max-width: 500px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	// .blog-comments__img
+
+	&__img {
+		display: flex;
+		flex-direction: column;
+		width: 130px;
+		margin: 0px 30px 0px 0px;
+
+		@media (max-width: 500px) {
+			margin: 0px 0px 15px 0px;
+		}
+
+		img {
+			width: 130px;
+			height: 130px;
+			margin: 0px 0px 10px 0px;
+		}
+	}
+
+	&__btn {
+		padding: 10px;
+		background: $color-secondary;
+		
+		&:hover {
+			background: #14BDD0;
+		}
+	}
+
+	// .blog-comments__body
+
+	&__body {
+	}
+
+	// .blog-comments__body-header
+
+	&__body-header {
+		display: flex;
+		margin-top: 15px;
+	}
+
+	// .blog-comments__name
+
+	&__name {
+		position: relative;
+		color: #666666;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 25px;
+		text-transform: uppercase;
+		letter-spacing: 0.8px;
+		margin: 0px 0px 25px 0px;
+		padding: 0px 60px 0px 0px;
+
+		@media (max-width: 1100px) {
+			margin: 0px 0px 10px 0px;
+		}
+
+		@media (max-width: 500px) {
+			padding: 0px 20px 0px 0px;
+		}
+
+		&::after {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			content: "";
+			width: 10px;
+			height: 1px;
+			margin: 0px 20px 0px 0px;
+			background-color: #666666;
+		}
+	}
+
+	// .blog-comments__date
+
+	&__date {
+		color: $color-secondary;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 25px;
+		letter-spacing: 0.56px;
+	}
+
+	// .rooms-reviews__body-text
+
+	&__body-text {
+		color: #666666;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 25px;
+		letter-spacing: 0.56px;
+		margin: 0px 0px 25px 0px;
+
+		@media (max-width: 1100px) {
+			margin: 0px 0px 10px 0px;
+			line-height: 20px;
+		}
+	}
+
+
+
+}
+

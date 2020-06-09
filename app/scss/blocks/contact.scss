@@ -62,24 +62,6 @@
 	&__form {
 		display: flex;
 		flex-direction: column;
-
-		input,
-		textarea {
-			border: 1px solid #dddddd;
-			margin: 0px 0px 20px 0px;
-			border-radius: 3px;
-			padding: 15px 20px;
-
-			&:active,
-			&:focus {
-				border-color: $color-secondary;
-			}
-
-			&:active:placeholder-shown,
-			&:focus:placeholder-shown {
-				color: $color-secondary;
-			}
-		}
 	}
 
 	// .contact__form-name
@@ -106,7 +88,6 @@
 
 	&__form-message {
 		height: 150px;
-		resize: none;
 	}
 
 	// .contact__form-btn

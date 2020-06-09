@@ -31,6 +31,10 @@
 @import "pages/rooms-single/rooms-img";
 @import "pages/rooms-single/rooms-detail";
 @import "pages/rooms-single/rooms-reviews";
+@import "pages/blog-single/blog-img";
+@import "pages/blog-single/blog-detail";
+@import "pages/blog-single/blog-comments";
+@import "pages/blog-single/blog-leave-comment";
 
 // Components
 @import "components/menu";
@@ -49,6 +53,7 @@
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 nav,footer,header,aside{display: block;}
+html {scroll-behavior: smooth;}
 html,body{color: $color;font-family: $font-family;height:100%;width:100%;font-size:100%;line-height:1;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 input,button,textarea{font-family:inherit;}
 input::-ms-clear{display: none;}
@@ -59,7 +64,24 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+input,
+textarea {
+	border: 1px solid #dddddd;
+	margin: 0px 0px 20px 0px;
+	border-radius: 3px;
+	padding: 15px 20px;
+	resize: none;
 
+	&:active,
+	&:focus {
+		border-color: $color-secondary;
+	}
+
+	&:active:placeholder-shown,
+	&:focus:placeholder-shown {
+		color: $color-secondary;
+	}
+}
 .container {
   max-width: 1210px;
   margin: 0 auto;
