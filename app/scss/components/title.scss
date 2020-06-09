@@ -7,6 +7,15 @@
 	color: $color-secondary;
 	font-family: $font-third;
 	text-transform: capitalize;
+	margin-bottom: 60px;
+
+	@media (max-width: 768px) {
+		margin-bottom: 40px;
+	}
+
+	@media (max-width: 480px) {
+		margin-bottom: 30px;
+	}
 
 	&::after {
 		content: "";

@@ -14,7 +14,7 @@
 		font-family: $font-third;
 		text-align: center;
 		color: $color-secondary;
-		font-size: 40px;
+		@include adaptive-font(40, 37);
 		font-weight: 700;
 		line-height: 30px;
 		letter-spacing: 1.6px;
@@ -22,6 +22,14 @@
 
 		@media (max-width: 1400px) {
 			margin: 0px 0px 50px 0px;
+		}
+
+		@media (max-width: 768px) {
+			margin-bottom: 40px;
+		}
+	
+		@media (max-width: 480px) {
+			margin-bottom: 30px;
 		}
 	}
 
@@ -93,7 +101,7 @@
 		justify-content: space-between;
 		align-items: center;
 		background-color: #f7faff;
-		padding: 30px 45px;
+		padding: 45px 30px;
 		border: 1px solid #dddddd;
 		color: #666666;
 		transition: border .3s, color .3s, background-color .3s;
@@ -113,23 +121,23 @@
 		font-size: 40px;
 		letter-spacing: 1.6px;
 		
-
 		span {
 			letter-spacing: 0.56px;
 			font-size: 18px;
 		}
 	}
 
-	// .pricings__item-list
-
 	&__item-list {
+		display: flex;
+
+		li:not(:last-child){
+			margin-right: 5px;
+		}
+
+		i {
+			font-size: 26px;
+		}
 	}
-
-	// .pricings__item-star
-
-	&__item-star {
-	}
-
 	// .pricings__item-body
 
 	&__item-body {
@@ -159,6 +167,13 @@
 
 		@media (max-width: 1400px) {
 			margin: 0px 0px 40px 0px;
+		}
+
+		@media (max-width: 768px) {
+			margin: 0 0 30px 0;
+		}
+		@media (max-width: 480px) {
+			margin: 0 0 25px 0;
 		}
 
 		&::after {

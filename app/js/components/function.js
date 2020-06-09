@@ -1,8 +1,9 @@
 $(function(){
 
 	$(".about__slider").slick({
-		slidesToShow: 6,
+		slidesToShow: 7,
 		slidesToScroll: 1,
+		cssEase: 'linear',
 		asNavFor: '.about__slider-info',
 		responsive: [
 			{

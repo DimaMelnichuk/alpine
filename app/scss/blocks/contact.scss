@@ -8,11 +8,6 @@
 	@media (max-width: 480px) {
 		padding: 30px 0px;
 	}
-	// .contact__title
-
-	&__title {
-		margin: 0px 0px 60px 0px;
-	}
 
 	// .contact__row
 
@@ -41,11 +36,6 @@
 		}
 	}
 
-	// .contact__item
-
-	&__item {
-	}
-
 	// .contact__item-title
 
 	&__item-title {
@@ -55,6 +45,10 @@
 		line-height: 25px;
 		letter-spacing: 0.96px;
 		margin: 0px 0px 40px 0px;
+
+		@media (max-width: 480px) {
+			margin: 0px 0px 30px 0px;
+		}
 	}
 
 	// .contact__form
@@ -62,26 +56,12 @@
 	&__form {
 		display: flex;
 		flex-direction: column;
-	}
 
-	// .contact__form-name
-
-	&__form-name {
-	}
-
-	// .contact__form-email
-
-	&__form-email {
-	}
-
-	// .contact__form-number
-
-	&__form-number {
-	}
-
-	// .contact__form-subject
-
-	&__form-subject {
+		input,
+		textarea {
+			margin: 0px 0px 20px 0px;
+			
+		}
 	}
 
 	// .contact__form-message
@@ -96,11 +76,16 @@
 		text-align: left;
 		align-self: flex-end;
 		padding: 15px 100px 15px 20px;
-		background: $color-secondary;	
+		background: $color-secondary;
+		border: 1px solid $color-secondary;	
 
 		&:hover {
 			background: $white;
 			color: $color-secondary;
+
+			&::after {
+				background: $color-secondary;
+			}
 		}
 	}
 
