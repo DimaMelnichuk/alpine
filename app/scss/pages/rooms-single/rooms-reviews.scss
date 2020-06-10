@@ -50,11 +50,6 @@
 		}
 	}
 
-	// .rooms-reviews__body
-
-	&__body {
-	}
-
 	// .rooms-reviews__body-header
 
 	&__body-header {
@@ -63,7 +58,15 @@
 	}
 	
 	&__star-list {
-		display: flex;		
+		display: flex;
+
+		li:not(:last-child) {
+			margin: 0px 5px 0px 0px;
+		}
+		
+		i {
+			color: $color-secondary;
+		}
 	}
 
 	// .rooms-reviews__name

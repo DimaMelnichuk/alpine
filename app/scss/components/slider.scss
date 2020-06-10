@@ -1,3 +1,44 @@
+/* ==========================================================================
+  General Styles
+========================================================================== */
+.slick-arrow{
+	position: absolute;
+	padding: 0;
+	font-size: 0;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: transparent;
+	color: transparent;
+	z-index: 1;
+}
+
+.slick-prev::before, 
+.slick-next::before {
+	content: "";
+	font-family: "fontello";
+	font-size: 18px;
+	width: 45px;
+	height: 45px;
+	border: 2px solid;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: color .3s, border-color .3s;
+}
+
+.slick-next::before {
+	content: '\e802';
+ }
+ 
+.slick-prev::before {
+	content: '\e801';
+}
+
+/* ==========================================================================
+  About__slider
+========================================================================== */
 .about__slider .slick-track {
 	display: flex;
 	align-items: center;
@@ -8,21 +49,9 @@
 	}
 }
 
-.slick-arrow{
-	position: absolute;
-	padding: 0;
-	font-size: 0;
-	cursor: pointer;
-	border: none;
-	outline: none;
-	background: transparent;
-	color: transparent;
-	width: 45px;
-	height: 45px;
-	border: 2px solid;
-	border-radius: 50%;
-	z-index: 1;
-	transition: border-color .3s;
+.about__slider .slick-prev:before, 
+.about__slider .slick-next:before {
+	color: $color-secondary;
 }
 
 .about__slider .slick-arrow {
@@ -44,16 +73,17 @@
 		left: 30%;
 	}
  }
-
-.about__slider .slick-arrow{
-	border-color: $color-secondary;
+/* ==========================================================================
+  testimonials__slider
+========================================================================== */
+ .testimonials__slider .slick-prev::before, 
+ .testimonials__slider .slick-next::before {
+	color: $white;
 }
 
-.about__slider .slick-arrow:hover {
-}
-
-.testimonials__slider .slick-arrow{
-	border-color: $white;
+ .testimonials__slider .slick-prev:hover::before, 
+ .testimonials__slider .slick-next:hover::before {
+	color: $color-secondary;
 }
 
 .testimonials__slider .slick-arrow {
@@ -68,44 +98,18 @@
 .testimonials__slider .slick-next {
 	right: 0%;
  }
-
-.testimonials__slider .slick-arrow:hover {
-	border-color: $color-secondary;
-}
-
-.slick-prev:before, 
-.slick-next:before {
-	font-family: "fontello";
-	font-size: 18px;
-	color: $white;
-	transition: color .3s;
-}
-
-.about__slider .slick-prev:before, 
-.about__slider .slick-next:before {
-	color: $color-secondary;
-}
-
-.slick-prev:hover:before, 
-.slick-next:hover:before {
-	color: $color-secondary;
-}
-
-.slick-next:before {
-	content: '\e802';
- }
- 
-.slick-prev:before {
-	content: '\e801';
-}
-
-
-.rooms-img__slider .slick-arrow {
+/* ==========================================================================
+  rooms-img__slider
+========================================================================== */
+.rooms-img__slider .slick-prev::before, 
+.rooms-img__slider .slick-next::before {
 	background: $color-secondary;
-}
-.rooms-img__slider .slick-prev:before, 
-.rooms-img__slider .slick-next:before {
+	border-color: $color-secondary;
 	color: $white;
+
+	@media (max-width: 768px) {
+		visibility: hidden;
+	}
 }
 
 .rooms-img__slider .slick-arrow {

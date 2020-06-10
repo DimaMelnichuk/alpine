@@ -38,21 +38,11 @@
 	&__form {
 		display: flex;
 		flex-direction: column;
-	}
 
-	// .blog-leave-comment__form-name
-
-	&__form-name {
-	}
-
-	// .blog-leave-comment__form-email
-
-	&__form-email {
-	}
-
-	// .blog-leave-comment__form-subject
-
-	&__form-subject {
+		input,
+		textarea {
+			margin: 0px 0px 20px 0px;
+		}
 	}
 
 	// .blog-leave-comment__form-message

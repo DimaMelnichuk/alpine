@@ -85,8 +85,6 @@ menu_burger.addEventListener("click", function (e) {
 	body.classList.toggle('lock');
 });
 
-
-
 /***************** WebP ********************/
 function testWebP(callback) {
 	var webP = new Image();
