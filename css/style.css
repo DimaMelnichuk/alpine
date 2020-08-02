@@ -331,7 +331,7 @@
 .main-screen__box-title span {
   display: block;
   font-family: "Oranienbaum", serif;
-  font-size: calc(40px + 20 * ((100vw - 320px) / 1580));
+  font-size: calc(36px + 24 * ((100vw - 320px) / 1580));
   letter-spacing: 2.4px;
   margin: 15px 0px 20px 0px;
 }
@@ -424,7 +424,6 @@
 }
 
 .about__img {
-  min-width: 300px;
   width: 100%;
   height: 398px;
   -o-object-fit: cover;
@@ -435,7 +434,7 @@
 
 .about__slider {
   position: relative;
-  height: 400px;
+  height: 350px;
   background-color: #f7faff;
 }
 
@@ -699,22 +698,8 @@
           transform: translateY(-50%);
 }
 
-.testimonials__star-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.testimonials__box-rating {
   padding: 0px 0px 0px 290px;
-}
-
-.testimonials__star-item:not(:last-child) {
-  margin: 0px 7px 0px 0px;
-}
-
-.testimonials__star-item:not(:last-child) i {
-  color: #019bad;
 }
 
 .rooms {
@@ -1264,6 +1249,15 @@
   background-color: #222222;
 }
 
+.news__btn {
+  padding: 60px 0px 0px 0px;
+  text-align: center;
+}
+
+.news__btn .about__btn {
+  margin: 0;
+}
+
 .pricings {
   padding: 60px 0px;
 }
@@ -1298,9 +1292,20 @@
       -ms-flex: 0 1 33.333%;
           flex: 0 1 33.333%;
   padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .pricings__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border: 1px solid #dddddd;
   -webkit-transition: border .3s;
   -o-transition: border .3s;
@@ -1385,6 +1390,9 @@
 }
 
 .pricings__item-body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   text-align: center;
   padding: 60px 15px;
   color: #666666;
@@ -1961,6 +1969,10 @@
   border-bottom: 1px solid #cccccc;
 }
 
+.page-rooms__featured {
+  padding: 0 15px;
+}
+
 .page-news {
   padding: 60px 0px;
 }
@@ -1970,7 +1982,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0px 0px 40px 0px;
-  margin: 0px 0px 30px 0px;
   border-bottom: 1px solid #cccccc;
 }
 
@@ -2478,11 +2489,12 @@
   font-family: "Oranienbaum", serif;
   text-transform: capitalize;
   margin-bottom: 60px;
+  overflow: hidden;
 }
 
 .title::after {
   content: "";
-  width: 84%;
+  width: 100%;
   height: 1px;
   position: absolute;
   bottom: 0;
@@ -2595,25 +2607,21 @@
           align-items: center;
 }
 
-.about__slider .slick-slide.slick-current .about__slider-item__box {
-  height: 400px;
-}
-
 .about__slider .slick-prev:before,
 .about__slider .slick-next:before {
   color: #019bad;
 }
 
 .about__slider .slick-arrow {
-  bottom: 0%;
+  top: 300px;
 }
 
 .about__slider .slick-prev {
-  left: 19%;
+  left: 20%;
 }
 
 .about__slider .slick-next {
-  left: 22%;
+  left: 24%;
 }
 
 /* ==========================================================================
@@ -2806,6 +2814,51 @@
 
 .pagination__link.active {
   border: 1px solid #019bad;
+  color: #019bad;
+}
+
+.rating {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rating__item {
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0px 7px 0px 0px;
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s;
+}
+
+.rating__item:hover,
+.rating__item:hover ~ .rating__item {
+  color: #019bad;
+}
+
+.rating__item--empty {
+  color: gray;
+}
+
+.rating__item-icon {
+  font-size: 16px;
+}
+
+.rating[data-total-value="1"] .rating__item:nth-child(n + 5),
+.rating[data-total-value="2"] .rating__item:nth-child(n + 4),
+.rating[data-total-value="3"] .rating__item:nth-child(n + 3),
+.rating[data-total-value="4"] .rating__item:nth-child(n + 2),
+.rating[data-total-value="5"] .rating__item:nth-child(n + 1) {
+  color: #019bad;
 }
 
 /* ==========================================================================
@@ -2975,6 +3028,16 @@ body.lock {
           flex: 1 1 auto;
 }
 
+@media (max-width: 1600px) {
+  .about__slider .slick-prev {
+    left: 13%;
+  }
+
+  .about__slider .slick-next {
+    left: 17%;
+  }
+}
+
 @media (max-width: 1400px) {
   .header__container {
     height: 60px;
@@ -3078,11 +3141,11 @@ body.lock {
   }
 
   .about__slider .slick-prev {
-    left: 25%;
+    left: 7%;
   }
 
   .about__slider .slick-next {
-    left: 30%;
+    left: 12%;
   }
 
   .breadcrumb {
@@ -3117,6 +3180,14 @@ body.lock {
   .testimonials__content {
     padding: 90px 60px 40px 60px;
     max-width: 850px;
+  }
+
+  .about__slider .slick-prev {
+    left: 15px;
+  }
+
+  .about__slider .slick-next {
+    left: 85px;
   }
 }
 
@@ -3367,6 +3438,12 @@ body.lock {
   }
 }
 
+@media (max-width: 780px) {
+  .blog-detail__quote {
+    padding: 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .about {
     padding: 40px 0px 0px 0px;
@@ -3410,14 +3487,14 @@ body.lock {
   }
 
   .services__row {
-    margin: -10px -10px;
+    margin: -15px -15px;
   }
 
   .services__column {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
-    padding: 10px 10px;
+    padding: 15px 15px;
   }
 
   .services__content-icon {
@@ -3495,6 +3572,10 @@ body.lock {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
+  }
+
+  .news__btn {
+    padding: 40px 0px 0px 0px;
   }
 
   .pricings {
@@ -3633,10 +3714,6 @@ body.lock {
 }
 
 @media (max-width: 600px) {
-  .main-screen__box {
-    padding: 40px 15px;
-  }
-
   .contact__column {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
@@ -3647,6 +3724,14 @@ body.lock {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
+  }
+
+  .breadcrumb {
+    height: 200px;
+  }
+
+  .breadcrumb__box-title span {
+    font-size: 33px;
   }
 }
 
@@ -3663,7 +3748,7 @@ body.lock {
     width: 160px;
   }
 
-  .testimonials__star-list {
+  .testimonials__box-rating {
     padding: 0px 0px 0px 200px;
   }
 }
@@ -3671,6 +3756,14 @@ body.lock {
 @media (max-width: 570px) {
   .main-screen {
     height: 600px;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 }
 
@@ -3692,6 +3785,10 @@ body.lock {
 }
 
 @media (max-width: 500px) {
+  .main-screen__box {
+    padding: 40px 15px;
+  }
+
   .rooms-reviews__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3722,10 +3819,6 @@ body.lock {
 
   .blog-comments__img {
     margin: 0px 0px 15px 0px;
-  }
-
-  .blog-comments__name {
-    padding: 0px 20px 0px 0px;
   }
 }
 
@@ -3774,7 +3867,7 @@ body.lock {
     content: none;
   }
 
-  .testimonials__star-list {
+  .testimonials__box-rating {
     padding: 0px 0px 0px 0px;
   }
 
@@ -3786,11 +3879,6 @@ body.lock {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
-  }
-
-  .rooms__item-overlay {
-    opacity: 1;
-    overflow: visible;
   }
 
   .rooms__item-icon {
@@ -3847,6 +3935,10 @@ body.lock {
     line-height: 18px;
   }
 
+  .news__btn {
+    padding: 30px 0px 0px 0px;
+  }
+
   .pricings {
     padding: 30px 0px;
   }
@@ -3885,12 +3977,6 @@ body.lock {
 
   .footer__row {
     padding: 0px 0px 30px 0px;
-  }
-
-  .footer__column {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
   }
 
   .footer__copyright {
@@ -3942,12 +4028,24 @@ body.lock {
     padding: 30px 0px;
   }
 
+  .blog-detail__quote {
+    padding: 30px;
+  }
+
+  .blog-detail__quote p {
+    font-size: 18px;
+  }
+
   .blog-comments {
     padding: 30px 0px;
   }
 
   .blog-leave-comment {
     padding: 30px 0px;
+  }
+
+  .blog-leave-comment__title::after {
+    display: none;
   }
 
   .title {
@@ -3967,7 +4065,7 @@ body.lock {
   }
 
   .breadcrumb {
-    height: 200px;
+    height: 150px;
   }
 }
 
@@ -3985,10 +4083,19 @@ body.lock {
   .main-screen__box-descr {
     font-size: 16px;
     line-height: 23px;
+    margin: 0px 0px 20px 0px;
   }
 }
 
 @media (max-width: 380px) {
+  .main-screen {
+    height: 500px;
+  }
+
+  .main-screen__box {
+    top: 63%;
+  }
+
   .main-screen__btn {
     width: 90%;
   }

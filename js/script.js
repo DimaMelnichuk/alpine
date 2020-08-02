@@ -54,6 +54,7 @@ $(function(){
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		fade: true,
+		adaptiveHeight: true,
 		cssEase: 'linear',
 		responsive: [
 			{
@@ -114,3 +115,15 @@ function ibg(){
 	}
 }
 ibg();
+const ratingItemList = document.querySelectorAll(".rating__item");
+const ratingItemArray = Array.prototype.slice.call(ratingItemList);
+
+ratingItemArray.forEach(item => 
+	item.addEventListener('click', () => {
+		const { itemValue } = item.dataset;
+		item.parentNode.dataset.totalValue = itemValue;
+
+		// request itemValue
+	})
+	
+);
