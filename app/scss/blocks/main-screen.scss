@@ -10,6 +10,10 @@
 		height: 600px;
 	}
 
+	@media (max-width: 380px) {
+		height: 500px;
+	}
+
 	// .main-screen__bg
 
 	&__bg {
@@ -39,8 +43,12 @@
 			padding: 70px;
 		}
 
-		@media (max-width: 600px) {
+		@media (max-width: 500px) {
 			padding: 40px 15px;
+		}
+
+		@media (max-width: 380px) {
+			top: 63%;
 		}
 	}
 
@@ -59,7 +67,7 @@
 		span {
 			display: block;
 			font-family: $font-third;
-			@include adaptive-font(60, 40);
+			@include adaptive-font(60, 36);
 			letter-spacing: 2.4px;
 			margin: 15px 0px 20px 0px;
 		}
@@ -77,6 +85,7 @@
 		@media (max-width: 400px) {
 			font-size: 16px;
 			line-height: 23px;
+			margin: 0px 0px 20px 0px;
 		}
 	}
 

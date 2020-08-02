@@ -195,29 +195,15 @@
 		}
 	}
 
-	// .testimonials__star-list
-
-	&__star-list {
-		display: flex;
-		align-items: center;
+	&__box-rating {
 		padding: 0px 0px 0px 290px;
 
 		@media (max-width: 580px) {
 			padding: 0px 0px 0px 200px;
 		}
-
+	
 		@media (max-width: 480px) {
 			padding: 0px 0px 0px 0px;
-		}
-	}
-
-	// .testimonials__star-item
-
-	&__star-item:not(:last-child) {
-		margin: 0px 7px 0px 0px;
-
-		i {
-			color: $color-secondary;
 		}
 	}
 }

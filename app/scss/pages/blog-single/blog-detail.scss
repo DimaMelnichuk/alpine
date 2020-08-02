@@ -27,6 +27,14 @@
 		padding: 55px 65px;
 		margin-bottom: 40px;
 
+		@media (max-width: 780px) {
+			padding: 40px;
+		}
+
+		@media (max-width: 480px) {
+			padding: 30px;
+		}
+
 		&::after {
 			content: "";
 			position: absolute;
@@ -71,6 +79,10 @@
 			font-weight: 600;
 			line-height: 35px;
 			letter-spacing: 0.8px;
+
+			@media (max-width: 480px) {
+				font-size: 18px;
+			}
 		}
 	}
 

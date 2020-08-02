@@ -54,6 +54,7 @@ $(function(){
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		fade: true,
+		adaptiveHeight: true,
 		cssEase: 'linear',
 		responsive: [
 			{

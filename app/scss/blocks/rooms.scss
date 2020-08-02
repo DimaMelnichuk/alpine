@@ -232,11 +232,6 @@
 		overflow: hidden;
 		transition: opacity .3s;
 
-		@media (max-width: 480px) {
-			opacity: 1;
-			overflow: visible;
-		}
-
 		&::after {
 			content: "";
 			position: absolute;

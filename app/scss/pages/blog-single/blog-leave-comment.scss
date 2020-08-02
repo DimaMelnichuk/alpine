@@ -12,6 +12,12 @@
 
 	&__title {
 		margin: 0px 0px 60px 0px;
+
+		@media (max-width: 480px) {
+			&::after {
+				display: none;
+			}
+		}
 	}
 
 	// .blog-leave-comment__row

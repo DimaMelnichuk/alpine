@@ -47,6 +47,7 @@
 	&__column {
 		flex: 0 1 33.333%;
 		padding: 15px;
+		display: flex;
 
 		@media (max-width: 900px) {
 			flex: 0 1 50%;
@@ -60,6 +61,9 @@
 	// .pricings__item
 
 	&__item {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
 		border: 1px solid #dddddd;
 		transition: border .3s;
 
@@ -141,6 +145,7 @@
 	// .pricings__item-body
 
 	&__item-body {
+		flex: 1 1 auto;
 		text-align: center;
 		padding: 60px 15px;
 		color: #666666;
