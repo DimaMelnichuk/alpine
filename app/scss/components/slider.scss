@@ -11,6 +11,10 @@
 	background: transparent;
 	color: transparent;
 	z-index: 1;
+	width: 45px;
+	height: 45px;
+	border: 2px solid;
+	border-radius: 50%;
 }
 
 .slick-prev::before, 
@@ -18,10 +22,7 @@
 	content: "";
 	font-family: "fontello";
 	font-size: 18px;
-	width: 45px;
-	height: 45px;
-	border: 2px solid;
-	border-radius: 50%;
+	height: 43px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -37,52 +38,49 @@
 }
 
 /* ==========================================================================
-  About__slider
+  about__info-slider
 ========================================================================== */
+.about__info-slider .slick-track {
+	display: flex;
+	align-items: center;
+}
 .about__slider .slick-track {
 	display: flex;
 	align-items: center;
 }
+.about__slider .slick-current {
+	.about__slider-img {
+		height: 330px;
 
-.about__slider .slick-prev:before, 
-.about__slider .slick-next:before {
+		@media (max-width: 1366px) {
+			height: 300px;
+		}
+
+		@media (max-width: 450px) {
+			height: 240px;
+		}
+	}
+}
+.about__info-slider .slick-list {
+	display: flex;
+	height: 100% !important;
+}
+.about__info-slider .slick-prev:before, 
+.about__info-slider .slick-next:before {
 	color: $color-secondary;
 }
 
-.about__slider .slick-arrow {
-	top: 300px;
+.about__info-slider .slick-arrow {
+	top: 0;
+	color: $color-secondary;
 }
 
-.about__slider .slick-prev {
-	left: 20%;
-
-	@media (max-width: 1600px) {
-		left: 13%;
-	}
-
-	@media (max-width: 1400px) {
-		left: 7%;
-	}
-
-	@media (max-width: 1200px) {
-		left: 15px;
-	}
+.about__info-slider .slick-prev {
+	left: 0;
  }
  
-.about__slider .slick-next {
-	left: 24%;
-
-	@media (max-width: 1600px) {
-		left: 17%;
-	}
-
-	@media (max-width: 1400px) {
-		left: 12%;
-	}
-
-	@media (max-width: 1200px) {
-		left: 85px;
-	}
+.about__info-slider .slick-next {
+	left: 80px;
  }
 /* ==========================================================================
   testimonials__slider
@@ -94,12 +92,23 @@
 
  .testimonials__slider .slick-prev:hover::before, 
  .testimonials__slider .slick-next:hover::before {
-	color: $color-secondary;
+
+	@media (min-width: 991.98px) {
+		color: $color-secondary;
+	}
 }
 
 .testimonials__slider .slick-arrow {
+	color: $white;
 	top: 50%;
 	transform: translateY(-50%);
+	transition: color .3s;
+
+	&:hover {
+		@media (min-width: 991.98px) {
+			color: $color-secondary;
+		}
+	}
 }
 
 .testimonials__slider .slick-prev {
@@ -114,18 +123,14 @@
 ========================================================================== */
 .rooms-img__slider .slick-prev::before, 
 .rooms-img__slider .slick-next::before {
-	background: $color-secondary;
-	border-color: $color-secondary;
 	color: $white;
-
-	@media (max-width: 768px) {
-		visibility: hidden;
-	}
 }
 
 .rooms-img__slider .slick-arrow {
-	top: 40%;
-	transform: translateY(-40%);
+	color: $color-secondary;
+	background-color: $color-secondary;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .rooms-img__slider .slick-prev {

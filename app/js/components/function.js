@@ -4,7 +4,8 @@ $(function(){
 		slidesToShow: 7,
 		slidesToScroll: 1,
 		cssEase: 'linear',
-		asNavFor: '.about__slider-info',
+		arrows: false,
+		asNavFor: '.about__info-slider',
 		responsive: [
 			{
 			  breakpoint: 1500,
@@ -41,13 +42,13 @@ $(function(){
 		 ]
 	});
 
-	$(".about__slider-info").slick({
+	$(".about__info-slider").slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		arrows:false,
-		asNavFor: '.about__slider',
+		arrows: true,
 		fade: true,
-		cssEase: 'linear'
+		cssEase: 'linear',
+		asNavFor: '.about__slider',
 	});
 
 	$(".testimonials__slider").slick({
@@ -71,6 +72,14 @@ $(function(){
 		slidesToScroll: 1,
 		fade: true,
 		cssEase: 'linear',
+		responsive: [
+			{
+			  breakpoint: 769,
+			  settings: {
+				arrows: false,
+			  }
+			}
+		 ]
 	});
  
 });

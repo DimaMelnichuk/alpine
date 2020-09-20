@@ -9,158 +9,21 @@
 		padding: 30px 0px;
 	}
 
-	// .rooms__featured
+	&__inner {
+		padding: 0px 0px 46px 0px;
+		margin: 0px 0px 43px 0px;
+		border-bottom: 1px solid #cccccc;
 
-	&__featured {
-		display: flex;
-		margin: 0px 0px 40px 0px;
-
-		@media (max-width: 650px) {
-			flex-direction: column;
+		@media (max-width: 767.98px) {
 			margin: 0px 0px 30px 0px;
 		}
 	}
 
-	// .rooms__featured-image
-
-	&__featured-image {
-		flex: 0 0 50%;
-		position: relative;
-		min-height: 300px;
-		margin: 0px 30px 0px 0px;
-
+	&__featured {
+		margin: 0px 0px 40px 0px;
+	
 		@media (max-width: 650px) {
-			margin: 0px 0px 20px 0px;
-		}
-	}
-
-	// .rooms__featured-img
-
-	&__featured-img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-
-	// .rooms__featured-overlay
-
-	&__featured-overlay {
-		position: absolute;
-		bottom: 20px;
-		right: 20px;
-	}
-
-	// .rooms__featured-price
-
-	&__featured-price {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		color: $color-secondary;
-		font-size: 14px;
-		font-weight: 700;
-		line-height: 18px;
-		letter-spacing: 0.56px;
-
-		span {
-			display: block;
-			text-decoration: line-through;
-		}
-	}
-
-	// .rooms__featured-body
-
-	&__featured-body {
-		display: flex;
-		flex-direction: column;
-	}
-
-	// .rooms__featured-title
-
-	&__featured-title {
-		color: #666666;
-		font-size: 20px;
-		font-weight: 600;
-		line-height: 25px;
-		text-transform: uppercase;
-		letter-spacing: 0.8px;
-		margin: 0px 0px 20px 0px;
-		transition: color .3s;
-
-		&:hover {
-			color: $color-secondary;
-		}
-
-		@media (max-width: 1366px) {
-			margin: 0 0 15px 0;
-		}
-
-		@media (max-width: 1110px) {
-			margin: 0px 0px 10px 0px;
-		}
-	}
-
-	// .rooms__featured-text
-
-	&__featured-text {
-		font-size: 14px;
-		font-weight: 400;
-		line-height: 25px;
-		letter-spacing: 0.56px;
-		margin: 0px 0px 35px 0px;
-
-		@media (max-width: 1366px) {
-			line-height: 20px;
-    		margin: 0 0 20px 0;
-		}
-
-		@media (max-width: 1110px) {
-			margin: 0px 0px 15px 0px;
-		}
-	}
-
-	// .rooms__featured-list
-
-	&__featured-list {
-		flex: 1 1 auto;
-		margin: 0px 0px 15px 0px;
-	}
-
-	// .rooms__featured-item
-
-	&__featured-item {
-		position: relative;
-		font-size: 14px;
-		font-weight: 400;
-		line-height: 25px;
-		letter-spacing: 0.56px;
-		padding: 0px 0px 0px 25px;
-
-		&::before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-			width: 10px;
-			height: 1px;
-			background-color: $color-secondary;
-		}
-	}
-
-	// .rooms__featured-btn
-
-	&__featured-btn {
-		background: #222222;
-		align-self: flex-start;
-		padding: 15px 95px 15px 20px;
-
-		&:hover {
-			background: $color-secondary;
+			margin: 0px 0px 30px 0px;
 		}
 	}
 
@@ -170,6 +33,10 @@
 		display: flex;
 		flex-flow: row wrap;
 		margin: -15px -15px -15px -15px;
+
+		@media (max-width: 991.98px) {
+			margin: -10px;
+		}
 	}
 
 	// .rooms__column
@@ -177,6 +44,10 @@
 	&__column {
 		flex: 0 1 33.333%;
 		padding: 15px 15px 15px 15px;
+
+		@media (max-width: 991.98px) {
+			padding: 10px;
+		}
 		
 		@media (max-width: 768px) {
 			flex: 0 1 50%;
@@ -190,8 +61,10 @@
 	&__item {
 
 		&:hover {
-			.rooms__item-overlay {
-				opacity: 1;
+			@media (min-width: 991.98px) {				
+				.rooms__item-overlay {
+					opacity: 1;
+				}
 			}
 		}
 	}
@@ -301,6 +174,14 @@
 		@media (max-width: 1366px) {
 			margin: 0px 0px 10px 0px;
 		}
+
+		@media (max-width: 580px) {
+			flex-direction: column;
+		}
+
+		@media (max-width: 479.98px) {
+			flex-direction: row;
+		}
 	}
 
 	// .rooms__item-title
@@ -324,8 +205,18 @@
 			line-height: 20px;
 		}
 
+		@media (max-width: 991.98px) {	
+			font-size: 14px;
+		}
+
+		@media (max-width: 767.98px) {
+			font-size: 16px;
+		}
+
 		&:hover {
-			color: $color-secondary;
+			@media (min-width: 991.98px) {
+				color: $color-secondary;
+			}
 		}
 	}
 
@@ -347,6 +238,13 @@
 			font-size: 16px;
 			line-height: 20px;
 		}
+		@media (max-width: 991.98px) {	
+			font-size: 14px;
+		}
+
+		@media (max-width: 767.98px) {
+			font-size: 16px;
+		}
 	}
 
 	// .rooms__item-btn
@@ -354,12 +252,14 @@
 	&__item-btn {
 		text-transform: capitalize;
 		color: #666666;
-		text-decoration: underline;
-		transition: color .3s;
+		border-bottom: 1px solid #666666;
+		transition: all .3s;
 
 		&:hover {
-			color: $color-secondary;
-			text-decoration: underline;
+			@media (min-width: 991.98px) {
+				color: $color-secondary;
+				border-color: $color-secondary;
+			}
 		}
 	}
 }

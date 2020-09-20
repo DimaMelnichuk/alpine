@@ -1,25 +1,12 @@
 .services {
 	padding: 60px 0px;
 
-	@media (max-width: 768px) {
+	@media (max-width: 767.98px) {
 		padding: 40px 0px;
 	}
 
-	@media (max-width: 480px) {
+	@media (max-width: 479.98px) {
 		padding: 30px 0px;
-	}
-	// .services__title
-
-	&__title {
-		margin-bottom: 65px;
-
-		@media (max-width: 768px) {
-			margin-bottom: 45px;
-		}
-	
-		@media (max-width: 480px) {
-			margin-bottom: 35px;
-		}
 	}
 
 	// .services__row
@@ -33,7 +20,7 @@
 			margin: -20px -20px;
 		}
 
-		@media (max-width: 768px) {
+		@media (max-width: 767.98px) {
 			margin: -15px -15px;
 		}
 	}
@@ -48,16 +35,20 @@
 		text-align: center;
 		padding: 30px 50px;
 
+		@media (max-width: 1366px) {
+			padding: 20px 35px;
+		}
+
 		@media (max-width: 1000px) {
 			padding: 20px 20px;
 		}
 
-		@media (max-width: 768px) {
+		@media (max-width: 767.98px) {
 			flex: 0 1 50%;
 			padding: 15px 15px;
 		}
 
-		@media (max-width: 480px) {
+		@media (max-width: 479.98px) {
 			flex: 0 1 100%;
 		}
 	}
@@ -70,8 +61,37 @@
 	&__content {
 
 		&:hover {
-			.services__content-title {
-				color: $color-secondary;
+			@media (min-width: 991.98px) {				
+				.services__content-title {
+					color: $color-secondary;
+				}
+				.services__content-icon {
+
+					&--pool {
+						background: url('../img/icons/sprites.png') -261px -70px;
+					}
+					&--breakfast {
+						background: url('../img/icons/sprites.png') -192px -81px;
+					}
+					&--restaurant {
+						background: url('../img/icons/sprites.png') -261px -12px;
+					}
+					&--pets {
+						background: url('../img/icons/sprites.png') -82px -209px;
+					}
+					&--washing {
+						background: url('../img/icons/sprites.png') -222px -209px;
+					}
+					&--wifi {
+						background: url('../img/icons/sprites.png') -81px -150px;
+					}
+					&--tv {
+						background: url('../img/icons/sprites.png') -12px -81px;
+					}
+					&--air {
+						background: url('../img/icons/sprites.png') -102px -12px;
+					}
+				}
 			}
 		}
 	}
@@ -79,27 +99,64 @@
 	// .services__icon
 
 	&__content-icon {
-		margin: 0px 0px 25px 0px;
-
+		margin: 0 auto 25px;
+		width: 45px;
+		height: 45px;
+		
 		@media (max-width: 1366px) {
-			margin: 0px 0px 20px 0px;
+			margin: 0px auto 10px;
 		}
 		
-		@media (max-width: 768px) {
-			margin: 0px 0px 15px 0px;
+		@media (max-width: 767.98px) {
+			margin: 0px auto 15px;
 		}
+		
+		&--pool {
+			width: 61px;
+			background: url('../img/icons/sprites.png') -261px -127px;
+		}
+		&--breakfast {
+			width: 45px;
+			
+			background: url('../img/icons/sprites.png') -192px -12px;
+		}
+		&--restaurant {
+			width: 46px;
+			background: url('../img/icons/sprites.png') -150px -150px;
+		}
+		&--pets {
+			width: 46px;
+			background: url('../img/icons/sprites.png') -12px -209px;
+		}
+		&--washing {
+			width: 46px;
+			background: url('../img/icons/sprites.png') -152px -209px;
+		}
+		&--wifi {
+			width: 45px;
+			background: url('../img/icons/sprites.png') -12px -150px;
+		}
+		&--tv {
+			width: 56px; 
+			background: url('../img/icons/sprites.png') -92px -81px;
+		}
+		&--air {
+			width: 66px; 
+			background: url('../img/icons/sprites.png') -12px -12px;
+		}
+	}
+
+	&__content-icon--bg {
+		margin: 0px auto 25px;
+		width: 65px;
+		height: 55px;
 
 		img {
-			width: 45px;
-			height: 45px;
 			object-fit: contain;
 		}
 	}
 
-	&__content-icon--bg img{
-		width: 65px;
-		height: 55px;
-	}
+	// .services__content-title
 
 	&__content-title {
 		font-size: 20px;
@@ -109,8 +166,26 @@
 		letter-spacing: 0.8px;
 		margin: 0px 0px 25px 0px;
 
-		@media (max-width: 768px) {
+		@media (max-width: 1366px) {
 			margin: 0px 0px 15px 0px;
+		}
+
+		@media (max-width: 767.98px) {
+			font-size: 18px;
+			line-height: 20px;
+		}
+	}
+
+	// .services__content-label
+
+	&__content-label {
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 25px;
+		text-transform: uppercase;
+		letter-spacing: 0.8px;
+
+		@media (max-width: 767.98px) {
 			font-size: 18px;
 			line-height: 20px;
 		}
@@ -124,7 +199,7 @@
 		line-height: 25px;
 		letter-spacing: 0.56px;
 
-		@media (max-width: 768px) {
+		@media (max-width: 767.98px) {
 			line-height: 21px;
 		}
 	}

@@ -29,7 +29,7 @@
 	&__item {
 		display: flex;
 
-		@media (max-width: 500px) {
+		@media (max-width: 600px) {
 			flex-direction: column;
 			align-items: center;
 		}
@@ -42,9 +42,10 @@
 		img {
 			width: 130px;
 			height: 130px;
+			object-fit: cover;
 			margin: 0px 30px 0px 0px;
 
-			@media (max-width: 500px) {
+			@media (max-width: 600px) {
 				margin: 0px 0px 15px 0px;
 			}
 		}
@@ -54,14 +55,23 @@
 
 	&__body-header {
 		display: flex;
-		align-items: baseline;
+		align-items: center;
+		margin: 0px 0px 10px 0px;
+
+		@media (max-width: 1100px) {
+			margin: 0px 0px 5px 0px;
+		}
 	}
 	
 	&__star-list {
 		display: flex;
 
-		li:not(:last-child) {
+		li {
 			margin: 0px 5px 0px 0px;
+
+			&:last-child {
+				margin: 0;
+			}
 		}
 		
 		i {
@@ -79,12 +89,7 @@
 		line-height: 25px;
 		text-transform: uppercase;
 		letter-spacing: 0.8px;
-		margin: 0px 0px 25px 0px;
 		padding: 0px 60px 0px 0px;
-
-		@media (max-width: 1100px) {
-			margin: 0px 0px 10px 0px;
-		}
 
 		@media (max-width: 500px) {
 			padding: 0px 20px 0px 0px;
@@ -110,11 +115,15 @@
 		font-weight: 400;
 		line-height: 25px;
 		letter-spacing: 0.56px;
-		margin: 0px 0px 25px 0px;
+		margin: 0px 0px 20px 0px;
 
 		@media (max-width: 1100px) {
 			margin: 0px 0px 10px 0px;
 			line-height: 20px;
+		}
+
+		@media (max-width: 991.98px) {
+			margin: 0px 0px 5px 0px;
 		}
 	}
 

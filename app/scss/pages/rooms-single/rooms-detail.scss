@@ -1,13 +1,19 @@
 .rooms-detail {
 	padding: 60px 0px;
 
+	@media (max-width: 1366px) {
+		padding: 50px 0px;
+	}
+
 	@media (max-width: 768px) {
 		padding: 40px 0px;
 	}
 
 	@media (max-width: 480px) {
-		padding: 30px 0px;
+		padding: 30px 0px 10px;
 	}
+
+
 	// .rooms-detail__text
 
 	&__text {
@@ -17,8 +23,20 @@
 		line-height: 30px;
 		letter-spacing: 0.64px;
 
+		@media (max-width: 1366px) {
+			line-height: 26px;
+		}
+
 		p:nth-child(1){
 			margin: 0px 0px 30px 0px;
+
+			@media (max-width: 1366px) {
+				margin: 0px 0px 25px 0px;
+			}
+
+			@media (max-width: 767.98px) {
+				margin: 0px 0px 15px 0px;
+			}
 		}
 	}
 }

@@ -1,17 +1,16 @@
 .blog-comments {
 	padding: 60px 0px;
 
+	@media (max-width: 1366px) {
+		padding: 50px 0px;
+	}
+
 	@media (max-width: 768px) {
 		padding: 40px 0px;
 	}
 
 	@media (max-width: 480px) {
 		padding: 30px 0px;
-	}
-	// .blog-comments__title
-
-	&__title {
-		margin: 0px 0px 60px 0px;
 	}
 
 	// .blog-comments__row
@@ -42,7 +41,6 @@
 	&__img {
 		display: flex;
 		flex-direction: column;
-		width: 130px;
 		margin: 0px 30px 0px 0px;
 
 		@media (max-width: 500px) {
@@ -52,7 +50,13 @@
 		img {
 			width: 130px;
 			height: 130px;
+			object-fit: cover;
 			margin: 0px 0px 10px 0px;
+
+			@media (max-width: 767.98px) {
+				width: 100px;
+				height: 100px;
+			}
 		}
 	}
 
@@ -70,6 +74,10 @@
 	&__body-header {
 		display: flex;
 		margin-top: 15px;
+
+		@media (max-width: 767.98px) {
+			margin: 0px;
+		}
 	}
 
 	// .blog-comments__name
@@ -89,6 +97,10 @@
 			margin: 0px 0px 10px 0px;
 		}
 		
+		@media (max-width: 479.98px) {
+			font-size: 18px;
+			margin: 0px 0px 5px 0px;
+		}
 
 		&::after {
 			position: absolute;

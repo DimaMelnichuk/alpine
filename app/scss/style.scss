@@ -1,5 +1,7 @@
 // Fonts
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@600;700&family=Oranienbaum&display=swap);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:600,700");
+@import url("https://fonts.googleapis.com/css?family=Oranienbaum:regular");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
 
 // Mixins
 @import "mixins/adaptive-font";
@@ -9,6 +11,15 @@
 @import "partials/vars";
 @import "partials/libs";
 
+//Pages
+@import "pages/rooms-single/rooms-img";
+@import "pages/rooms-single/rooms-detail";
+@import "pages/rooms-single/rooms-reviews";
+@import "pages/blog-single/blog-img";
+@import "pages/blog-single/blog-detail";
+@import "pages/blog-single/blog-comments";
+@import "pages/blog-single/blog-leave";
+
 // Blocks
 @import "blocks/header";
 @import "blocks/main-screen";
@@ -16,6 +27,7 @@
 @import "blocks/services";
 @import "blocks/testimonials";
 @import "blocks/rooms";
+@import "blocks/featured-rooms";
 @import "blocks/counters";
 @import "blocks/reservation";
 @import "blocks/news";
@@ -24,17 +36,6 @@
 @import "blocks/contact";
 @import "blocks/map";
 @import "blocks/footer";
-
-//Pages
-@import "pages/blocks/page-rooms";
-@import "pages/blocks/page-news";
-@import "pages/rooms-single/rooms-img";
-@import "pages/rooms-single/rooms-detail";
-@import "pages/rooms-single/rooms-reviews";
-@import "pages/blog-single/blog-img";
-@import "pages/blog-single/blog-detail";
-@import "pages/blog-single/blog-comments";
-@import "pages/blog-single/blog-leave-comment";
 
 // Components
 @import "components/menu";

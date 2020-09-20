@@ -1,11 +1,11 @@
 .about {
 	padding: 60px 0px 0px 0px;
 
-	@media (max-width: 768px) {
+	@media (max-width: 767.98px) {
 		padding: 40px 0px 0px 0px;
 	}
 
-	@media (max-width: 480px) {
+	@media (max-width: 479.98px) {
 		padding: 30px 0px 0px 0px;
 	}
 
@@ -15,36 +15,75 @@
 		display: flex;
 		margin: 0px 0px 70px 0px;
 
-		@media (max-width: 768px) {
+		@media (max-width: 991.98px) {
 			flex-direction: column;
+			margin: 0px 0px 60px 0px;
+		}
+
+		@media (max-width: 767.98px) {
+			margin: 0px 0px 50px 0px;
+		}
+
+		@media (max-width: 479.98px) {
+			margin: 0px 0px 40px 0px;
 		}
 	}
 
 	&__column {
-		flex: 0 1 30%;
+		flex: 0 0 350px;
+
+		@media (max-width: 991.98px) {
+			order: 1;
+			flex: 0 1 100%;
+		}
+
+		&--bg {
+			flex: 1 1 auto;
+
+			@media (max-width: 991.98px) {
+				order: 2;
+			}
+		}
 	}
 
-	&__column--bg {
-		flex: 0 1 70%;
+	// .about__item
+
+	&__item {
+		height: 100%;
 	}
 
 	// .about__text
 
-	&__text > p {
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 25px;
-		letter-spacing: 0.64px;
-		margin: 0px 0px 40px 0px;
+	&__text {
 		padding: 0px 60px 0px 0px;
 
-		@media (max-width: 768px) {
+		@media (max-width: 991.98px) {
 			padding: 0px 0px 0px 0px;
-			margin: 0 0 25px 0;
 		}
 
-		p:nth-child(1){
-			margin: 0px 0px 30px 0px;
+		p {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 25px;
+			letter-spacing: 0.64px;
+			margin: 0px 0px 40px 0px;
+
+			@media (max-width: 1366px) {
+				margin: 0 0 30px 0;
+			}
+	
+			@media (max-width: 991.98px) {
+				margin: 0 0 25px 0;
+			}
+
+			@media (max-width: 767.98px) {
+				margin: 0 0 20px 0;
+			}
+	
+			@media (max-width: 479.98px) {
+				margin: 0 0 15px 0;
+			}
+	
 		}
 	}
 
@@ -54,10 +93,6 @@
 		border: 1px solid $color-secondary;
 		background: $color-secondary;
 		padding: 15px 80px 15px 20px;
-
-		@media (max-width: 768px) {
-			margin: 0px 0px 30px 0px;
-		}
 
 		&:hover {
 			color: $color-secondary;
@@ -73,43 +108,76 @@
 	// .about__img
 
 	&__img {
-		width: 100%;
-		height: 398px;
-		object-fit: cover;
-		object-position: center;
+		position: relative;
+		height: 100%;
+
+		@media (max-width: 991.98px) {
+			padding: 0px 0px 40% 0px;
+			margin: 0px 0px 30px 0px;
+			overflow: hidden;
+			height: auto;
+		}
+
+		@media (max-width: 479.98px) {
+			padding: 0px 0px 70% 0px;
+			margin: 0px 0px 15px 0px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 	}
 
 	// .about__slider
 
 	&__slider {
 		position: relative;
-		height: 350px;
-		background-color: #f7faff;
+		background: rgb(255,255,255);
+		background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(247,250,255,1) 16%, rgba(247,250,255,1) 100%);
 	}
 
-	// .about__slider-item-box
-
-	&__slider-item__box {
+	&__slider-img {
 		height: 270px;
-	}
+		margin: 0px 0px 30px 0px;
 
-	&__slider-item__img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-	}
-
-	&__slider-info {
-		padding: 0px 0px 55px 0px;
-		background-color: #f7faff;
-
-		@media (max-width: 768px) {
-			padding: 0px 0px 45px 0px;
+		@media (max-width: 1366px) {
+			height: 240px;
+			margin: 0px 0px 20px 0px;
 		}
 
-		@media (max-width: 480px) {
-			padding: 0px 0px 30px 0px;
+		@media (max-width: 767.98px) {
+			margin: 0px 0px 15px 0px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__info {
+		background-color: #f7faff;
+	}
+	
+	&__info-slider {
+		padding: 60px 0 55px 0;
+
+		@media (max-width: 1366px) {
+			padding: 60px 0 55px 0;
+		}
+
+		@media (max-width: 767.98px) {
+			padding: 60px 0px 45px 0px;
+		}
+
+		@media (max-width: 479.98px) {
+			padding: 60px 0px 30px 0px;
 		}
 	}
 
@@ -121,13 +189,17 @@
 		font-weight: 600;
 		line-height: 25px;
 		letter-spacing: 0.96px;
-		margin: 30px 0px 16px 0px;
+		margin: 0px 0px 16px 0px;
 
-		@media (max-width: 768px) {
-			margin: 30px 0 10px 0;
+		@media (max-width: 1366px) {
+			margin: 0 0 5px 0;
 		}
 
-		@media (max-width: 480px) {
+		@media (max-width: 767.98px) {
+			margin: 0px 0 10px 0;
+		}
+
+		@media (max-width: 479.98px) {
 			font-size: 22px;
 		}
 	}
@@ -142,7 +214,11 @@
 		letter-spacing: 0.56px;
 		margin: 0px 0px 30px 0px;
 
-		@media (max-width: 768px) {
+		@media (max-width: 1366px) {
+			margin: 0 0 20px 0;
+		}
+
+		@media (max-width: 767.98px) {
 			line-height: 20px;
    		 margin: 0 0 15px 0;
 		}

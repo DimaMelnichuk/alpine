@@ -3,12 +3,15 @@
 	&__list {
 		display: flex;
 		justify-content: center;
-		margin: 45px 0px 0px 0px;
 	}
 	// .pagination__item
 
-	&__item:not(:last-child) {
+	&__item {
 		margin: 0px 5px 0px 0px;
+
+		&:last-child {
+			margin: 0;
+		}
 	}
 
 	// .pagination__link

@@ -1,18 +1,19 @@
 .main-screen {
 	position: relative;
-	height: 777px;
+	padding: 250px 0px 150px;
 
-	@media (max-width: 1366px) {
-		height: 700px;
+	@media (max-width: 1400px) {
+		padding: 190px 0px 110px;
 	}
 
-	@media (max-width: 570px) {
-		height: 600px;
+	@media (max-width: 991.98px) {
+		padding: 160px 0px 80px;
 	}
 
-	@media (max-width: 380px) {
-		height: 500px;
+	@media (max-width: 479.98px) {
+		padding: 140px 0 60px;
 	}
+
 
 	// .main-screen__bg
 
@@ -28,8 +29,7 @@
 
 	&__box {
 		position: relative;
-		top: 60%;
-    	transform: translateY(-60%);
+		top: 0;
 		z-index: 3;
 		max-width: 705px;
 		padding: 80px;
@@ -43,13 +43,15 @@
 			padding: 70px;
 		}
 
-		@media (max-width: 500px) {
+		@media (max-width: 991.98px) {
+			max-width: 520px;
+			padding: 50px;
+		}
+
+		@media (max-width: 479.98px) {
 			padding: 40px 15px;
 		}
 
-		@media (max-width: 380px) {
-			top: 63%;
-		}
 	}
 
 	// .main-screen__box-title
@@ -67,7 +69,7 @@
 		span {
 			display: block;
 			font-family: $font-third;
-			@include adaptive-font(60, 36);
+			@include adaptive-font(60, 40);
 			letter-spacing: 2.4px;
 			margin: 15px 0px 20px 0px;
 		}
@@ -95,7 +97,7 @@
 		display: flex;
 		justify-content: space-between;
 
-		@media (max-width: 540px) {
+		@media (max-width: 479.98px) {
 			flex-direction: column;
 			align-items: center;
 		}
@@ -110,22 +112,25 @@
 		text-align: left;
 		padding: 15px 10px 15px 20px;
 
-		@media (max-width: 540px) {
+		@media (max-width: 479.98px) {
 			margin: 0px 0px 10px 0px;
 			width: 70%;
 		}
 
 		@media (max-width: 380px) {
-			width: 90%;
+			width: 100%;
 		}
 
 		&:hover {
-			color: $color-secondary;
-			background: $white;
-			border: 1px solid $color-secondary;
-			
-			&::after {
-				background: $color-secondary;
+
+			@media (min-width: 991.98px) {
+				color: $color-secondary;
+				background: $white;
+				border: 1px solid $color-secondary;
+				
+				&::after {
+					background: $color-secondary;
+				}
 			}
 		
 		}
