@@ -1418,7 +1418,7 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background: url("../../img/icons/shape.png") no-repeat;
+  background: url("../img/icons/shape.png") no-repeat;
   height: 80px;
   width: 80px;
 }
@@ -4543,7 +4543,7 @@ body.lock {
 
 .webp .services__content-icon--air{ background: url(../img/icons/sprites.webp) -12px -12px; }
 
-.webp .featured-rooms__overlay{ background: url(../../img/icons/shape.webp) no-repeat; }
+.webp .featured-rooms__overlay{ background: url(../img/icons/shape.webp) no-repeat; }
 
 @media (min-width: 991.98px){
 
